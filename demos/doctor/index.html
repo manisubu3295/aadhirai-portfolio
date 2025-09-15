@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Care Clinic — Appointment Booking (Demo)</title>
+  <meta name="description" content="Mobile-first doctor appointment booking demo by Aadhirai Innovations.">
+  <link rel="icon" href="assets/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#home">
+        <img src="assets/brand.svg" alt="" width="28" height="28">
+        <span>Dr. Care Clinic</span>
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#book" class="btn">Book</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Trusted • Friendly • Nearby</p>
+        <h1>Your health, our priority.</h1>
+        <p class="lede">Book appointments online in seconds. Open Mon–Sat, 9:00 AM – 8:00 PM.</p>
+        <div class="cta">
+          <a class="btn" href="#book">Book Appointment</a>
+          <a class="btn ghost" href="https://wa.me/918754202581?text=Hi%2C%20I%20want%20to%20book%20an%20appointment" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Today’s Timings</h3>
+        <p>9:00 AM – 8:00 PM</p>
+        <h4>Contact</h4>
+        <p><a href="tel:+911234567890">+91 12345 67890</a></p>
+        <h4>Address</h4>
+        <p>12 Health Street, Your City</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <h2>Services</h2>
+      <div class="cards">
+        <article class="card svc">
+          <div class="shot s1"></div>
+          <h3>General Consultation</h3>
+          <p>Routine checkups and primary care.</p>
+          <p class="fee">₹500</p>
+        </article>
+        <article class="card svc">
+          <div class="shot s2"></div>
+          <h3>Pediatrics</h3>
+          <p>Child health & vaccinations.</p>
+          <p class="fee">₹600</p>
+        </article>
+        <article class="card svc">
+          <div class="shot s3"></div>
+          <h3>Dermatology</h3>
+          <p>Skin care & treatments.</p>
+          <p class="fee">₹700</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="doctors">
+    <div class="wrap docs">
+      <div class="card">
+        <h3>Dr. A. Sharma</h3>
+        <p>MBBS, MD (Medicine)</p>
+        <p>15+ years experience</p>
+      </div>
+      <div class="card">
+        <h3>Dr. K. Iyer</h3>
+        <p>MBBS, DCH (Pediatrics)</p>
+        <p>10+ years experience</p>
+      </div>
+      <div class="card">
+        <h3>Dr. R. Mehra</h3>
+        <p>MBBS, DDVL (Dermatology)</p>
+        <p>8+ years experience</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section book" id="book">
+    <div class="wrap">
+      <h2>Book an Appointment</h2>
+      <div class="grid">
+        <form class="form card" name="appointment" data-netlify="true" method="POST">
+          <input type="hidden" name="form-name" value="appointment">
+          <label><span>Full Name</span><input type="text" name="name" required></label>
+          <label><span>Phone</span><input type="tel" name="phone" required></label>
+          <label><span>Email</span><input type="email" name="email"></label>
+          <label><span>Doctor</span>
+            <select name="doctor" required>
+              <option value="Dr. A. Sharma">Dr. A. Sharma — General</option>
+              <option value="Dr. K. Iyer">Dr. K. Iyer — Pediatrics</option>
+              <option value="Dr. R. Mehra">Dr. R. Mehra — Dermatology</option>
+            </select>
+          </label>
+          <label><span>Date & Time</span><input type="datetime-local" name="datetime" required></label>
+          <label><span>Notes</span><textarea name="notes" rows="3" placeholder="Symptoms or requests"></textarea></label>
+          <button class="btn" type="submit">Request Booking</button>
+        </form>
+        <div class="card info">
+          <h3>How it works</h3>
+          <ol>
+            <li>Submit your details here.</li>
+            <li>We confirm via WhatsApp/SMS.</li>
+            <li>Visit the clinic at your time.</li>
+          </ol>
+          <p class="muted">This is a demo site by <strong>Aadhirai Innovations</strong>. Replace content easily for any clinic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span id="y"></span> Dr. Care Clinic • Demo by Aadhirai Innovations</p>
+      <a class="btn small" href="../../index.with-doctor.html">← Back to Portfolio</a>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
