@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retail Store + Chatbot (Demo) — Aadhirai Innovations</title>
+  <meta name="description" content="Mobile-first retail demo with product cards and WhatsApp chatbot ordering.">
+  <link rel="icon" href="assets/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#home">
+        <img src="assets/brand.svg" alt="" width="28" height="28">
+        <span>Retail Demo</span>
+      </a>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a class="btn" href="https://wa.me/918754202581?text=Hi%2C%20I%20am%20interested%20in%20your%20products" target="_blank" rel="noopener">Chat</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Smart • Simple • Fast</p>
+        <h1>Show your products. Chat to order.</h1>
+        <p class="lede">A modern storefront with a WhatsApp chatbot button. Perfect for small shops getting online quickly.</p>
+        <div class="cta">
+          <a class="btn" href="#products">Browse Products</a>
+          <a class="btn ghost" href="https://wa.me/918754202581?text=Hi%2C%20I%20want%20to%20order" target="_blank" rel="noopener">Chat Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Search</h3>
+        <input id="q" type="search" placeholder="Search products (e.g., shirt, phone)">
+        <p class="muted">Tip: Try “shirt” or “watch”.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="products">
+    <div class="wrap">
+      <h2>Featured Products</h2>
+      <div id="grid" class="grid"></div>
+    </div>
+  </section>
+
+  <section class="section alt" id="about">
+    <div class="wrap about">
+      <div>
+        <h2>About This Demo</h2>
+        <p>This is a demo storefront by <strong>Aadhirai Innovations</strong>. Customers discover items and place orders via WhatsApp with a pre-filled message.</p>
+        <ul>
+          <li>Mobile-first product cards</li>
+          <li>Search & instant filtering</li>
+          <li>WhatsApp “Chat to order” flow</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Need this for your shop?</h3>
+        <p>We can customize branding, products, and categories for your business.</p>
+        <a class="btn" href="https://wa.me/918754202581?text=Hi%2C%20I%20want%20a%20retail%20website%20like%20your%20demo" target="_blank" rel="noopener">Talk to Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span id="y"></span> Retail Demo • A showcase by Aadhirai Innovations</p>
+      <a class="btn small" href="../../index.with-retail.html">← Back to Portfolio</a>
+    </div>
+  </footer>
+
+  <script>
+    const products=[
+      {id:1,name:'Classic Cotton Shirt',price:799,category:'Apparel'},
+      {id:2,name:'Denim Jeans',price:1499,category:'Apparel'},
+      {id:3,name:'Analog Wrist Watch',price:1999,category:'Accessories'},
+      {id:4,name:'Bluetooth Earbuds',price:1299,category:'Electronics'},
+      {id:5,name:'Wireless Mouse',price:599,category:'Electronics'},
+      {id:6,name:'Leather Wallet',price:999,category:'Accessories'}
+    ];
+    const grid=document.getElementById('grid');
+    const q=document.getElementById('q');
+    const phone='918754202581'; // WhatsApp number
+    function card(p){
+      const msg=encodeURIComponent('Hi, I want to order: '+p.name+' (₹'+p.price+')');
+      return `
+        <article class="card product">
+          <div class="shot"></div>
+          <h3>${p.name}</h3>
+          <p class="muted">${p.category}</p>
+          <p class="price">₹${p.price}</p>
+          <div class="row">
+            <a class="btn" target="_blank" rel="noopener" href="https://wa.me/${phone}?text=${msg}">Chat to Order</a>
+          </div>
+        </article>`;
+    }
+    function render(list){ grid.innerHTML=list.map(card).join(''); }
+    function filter(){
+      const v=(q.value||'').toLowerCase();
+      render(products.filter(p=> (p.name+' '+p.category).toLowerCase().includes(v)));
+    }
+    q.addEventListener('input',filter);
+    render(products);
+    document.getElementById('y').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>

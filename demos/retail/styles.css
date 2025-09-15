@@ -1,0 +1,28 @@
+:root{
+  --royal:#0b5fff; --teal:#05b1a1; --ink:#0c111b; --muted:#6b7280; --bg:#ffffff; --alt:#f8fafc;
+}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937}
+.wrap{width:min(1100px,92%);margin:0 auto}
+.topbar{position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid #eef2ff;z-index:20}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:#111;font-weight:700}
+nav a{margin-left:.8rem;text-decoration:none;color:#111}
+.btn{padding:.6rem .9rem;background:linear-gradient(135deg,var(--royal),var(--teal));color:#fff;border-radius:.6rem;text-decoration:none;font-weight:700;border:0;display:inline-block}
+.btn.ghost{background:transparent;color:var(--royal);border:2px solid var(--royal)}
+.btn.small{padding:.4rem .7rem;font-size:.9rem}
+.hero{padding:3.5rem 0 2rem;background:radial-gradient(800px 220px at -10% 0, rgba(11,95,255,.12), transparent 60%),radial-gradient(800px 220px at 110% 100%, rgba(5,177,161,.12), transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem;align-items:start}
+.eyebrow{color:var(--teal);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;margin:0 0 .3rem}
+h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.15;margin:.2rem 0 .8rem}
+.lede{color:#334155;max-width:60ch}
+.card{border:1px solid #e5e7eb;border-radius:14px;padding:1rem;background:#fff;box-shadow:0 10px 30px rgba(11,95,255,.08)}
+.section{padding:3rem 0}
+.section.alt{background:var(--alt)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.product .shot{height:140px;border-radius:12px;border:1px solid #e5e7eb;background:linear-gradient(180deg,#fff,#fafafa);
+  background-image:radial-gradient(120px 80px at 10% 10%, rgba(11,95,255,.25), transparent 60%),radial-gradient(120px 80px at 90% 80%, rgba(5,177,161,.25), transparent 60%)}
+.price{font-weight:800;color:#0b5fff}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}
+.muted{color:#64748b}
+.footer{border-top:1px solid #eef2ff;padding:1rem 0;color:#475569}
+@media(max-width:800px){.hero-grid,.about{grid-template-columns:1fr}}
