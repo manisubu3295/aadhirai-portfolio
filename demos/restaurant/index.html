@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo Café — Aadhirai Innovations</title>
+  <meta name="description" content="A clean, mobile-first restaurant website demo you can customize for clients." />
+  <link rel="icon" href="assets/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#home">
+        <img src="assets/brand.svg" alt="" width="28" height="28">
+        <span>Demo Café</span>
+      </a>
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#reserve" class="btn">Reserve</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Fresh • Cozy • Local</p>
+        <h1>Where good food meets great moments.</h1>
+        <p class="lede">Open daily 8am–10pm. Dine-in & takeaway available. Located in the heart of the city.</p>
+        <div class="cta">
+          <a class="btn" href="#menu">View Menu</a>
+          <a class="btn ghost" href="#reserve">Book a Table</a>
+        </div>
+      </div>
+      <div class="card hours">
+        <h3>Today’s Hours</h3>
+        <p>8:00 AM – 10:00 PM</p>
+        <h4>Address</h4>
+        <p>123 Main Street, Your City</p>
+        <h4>Call</h4>
+        <p><a href="tel:+911234567890">+91 12345 67890</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="menu">
+    <div class="wrap">
+      <h2>Popular Picks</h2>
+      <div class="cards">
+        <article class="card dish">
+          <div class="shot shot1"></div>
+          <h3>Classic Margherita Pizza</h3>
+          <p>San Marzano tomatoes, fresh mozzarella, basil.</p>
+          <p class="price">₹399</p>
+        </article>
+        <article class="card dish">
+          <div class="shot shot2"></div>
+          <h3>Grilled Paneer Wrap</h3>
+          <p>Mint chutney, crisp veggies, soft flatbread.</p>
+          <p class="price">₹249</p>
+        </article>
+        <article class="card dish">
+          <div class="shot shot3"></div>
+          <h3>Espresso Affogato</h3>
+          <p>Vanilla gelato drowned in hot espresso.</p>
+          <p class="price">₹179</p>
+        </article>
+      </div>
+      <div class="menu-note">* Full downloadable menu available on request.</div>
+    </div>
+  </section>
+
+  <section class="section alt" id="about">
+    <div class="wrap about">
+      <div>
+        <h2>About Demo Café</h2>
+        <p>We’re a neighborhood café serving comfort food with fresh ingredients. This is a demo site by <strong>Aadhirai Innovations</strong> to showcase a fast, mobile-first restaurant website you can launch in days.</p>
+        <ul>
+          <li>Online reservations & WhatsApp ordering</li>
+          <li>Easy menu updates by staff</li>
+          <li>SEO-ready, blazing fast</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Reserve a Table</h3>
+        <form class="form" name="reserve" data-netlify="true" method="POST">
+          <input type="hidden" name="form-name" value="reserve">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            <span>Date & Time</span>
+            <input type="datetime-local" name="datetime" required>
+          </label>
+          <label>
+            <span>Guests</span>
+            <input type="number" min="1" max="20" name="guests" value="2" required>
+          </label>
+          <button class="btn" id="reserve">Reserve</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span id="y"></span> Demo Café • A showcase by Aadhirai Innovations</p>
+      <a class="btn small" href="../../index.with-restaurant.html">← Back to Portfolio</a>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
