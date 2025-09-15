@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f3f7ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b5fff"/>
+      <stop offset="1" stop-color="#05b1a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <rect x="32" y="40" width="576" height="280" rx="16" fill="#fff" stroke="#e5e7eb"/>
+  <rect x="48" y="64" width="320" height="24" rx="6" fill="url(#accent)"/>
+  <rect x="48" y="104" width="544" height="10" rx="5" fill="#e5e7eb"/>
+  <rect x="48" y="124" width="544" height="10" rx="5" fill="#e5e7eb"/>
+  <rect x="48" y="144" width="544" height="10" rx="5" fill="#e5e7eb"/>
+  <rect x="48" y="184" width="160" height="120" rx="12" fill="url(#accent)" opacity=".15"/>
+  <rect x="224" y="184" width="160" height="120" rx="12" fill="url(#accent)" opacity=".2"/>
+  <rect x="400" y="184" width="192" height="120" rx="12" fill="url(#accent)" opacity=".25"/>
+  <text x="48" y="310" font-family="Inter, Arial" font-size="16" fill="#334155">Restaurant Website — Live Demo</text>
+</svg>
